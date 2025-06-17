@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nezzo dev.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("oGwyJNYC9xCLdr6yI"); // твой публичный ключ
+
+    const form = document.querySelector(".contact-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_sa1bg4s", "template_de0qvdw", form)
+        .then(function () {
+          alert("✅ Сообщение успешно отправлено!");
+          form.reset();
+        }, function (error) {
+          alert("❌ Ошибка при отправке: " + JSON.stringify(error));
+        });
+    });
+  });
+</script>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">nezzo dev.</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Creative</span>
+                        <span class="title-line">Designer</span>
+                    </h1>
+                    <p class="hero-subtitle">Crafting digital experiences with passion and precision</p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">View Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-card card-1">
+                        <div class="card-content">
+                            <div class="card-icon">🎨</div>
+                            <h3>Design</h3>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-content">
+                            <div class="card-icon">💻</div>
+                            <h3>Develop</h3>
+                        </div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-content">
+                            <div class="card-icon">🚀</div>
+                            <h3>Deploy</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate about creating meaningful digital experiences</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a creative designer and developer with over 2 years of experience in crafting beautiful, functional digital solutions. I specialize in UI/UX design, front-end development, and brand identity.</p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">🎨</div>
+                            <h4>UI/UX Design</h4>
+                            <p>Creating intuitive and engaging user experiences</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">⚡</div>
+                            <h4>Frontend Dev</h4>
+                            <p>Building responsive and performant web applications</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🎯</div>
+                            <h4>Brand Identity</h4>
+                            <p>Developing cohesive visual brand experiences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">A selection of my recent projects</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="./img/vibrant.png" alt="vibrant">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <h3>E-commerce Platform</h3>
+                                <p>Modern shopping experience with seamless checkout</p>
+                                <div class="card-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="./img/creative-agency.png" alt="Mobile Banking App">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <h3>Creative Agency</h3>
+                                <p>Secure and intuitive financial management</p>
+                                <div class="card-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">UI/UX</span>
+                                    <span class="tag">CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="./img/dudeshape.png" alt="Brand Identity">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <h3>Brand Identity</h3>
+                                <p>Complete visual identity for tech startup</p>
+                                <div class="card-tags">
+                                    <span class="tag">Branding</span>
+                                    <span class="tag">Logo Design</span>
+                                    <span class="tag">Print</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="./img/mailchimp.png" alt="SaaS Dashboard">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <h3>MAIL Company</h3>
+                                <p>Analytics dashboard with real-time data</p>
+                                <div class="card-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">django</span>
+                                    <span class="tag">API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>rakhimjanovjakhongir9@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+998 (88) 309-2832</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Uzbekistan, Andijan</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 nezzo dev. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
