@@ -6,11 +6,12 @@
     <title>nezzo dev.</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/language-switcher.css">
 </head>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("oGwyJNYC9xCLdr6yI"); // твой публичный ключ
+    emailjs.init("oGwyJNYC9xCLdr6yI");
 
     const form = document.querySelector(".contact-form");
     form.addEventListener("submit", function (e) {
@@ -36,10 +37,19 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                <li>
+                    <div class="lang-switcher">
+                        <select id="language-selector">
+                            <option value="en">EN</option>
+                            <option value="ru">RU</option>
+                            <option value="uz">UZ</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -49,38 +59,64 @@
         </div>
     </nav>
 
+    <!-- Альтернативный кастомный переключатель (если хотите больше контроля) -->
+    <!-- Раскомментируйте этот блок и закомментируйте обычный select выше -->
+    <!--
+    <div class="custom-lang-switcher" style="display: none;">
+        <div class="custom-select" id="custom-language-selector">
+            <span class="flag flag-en"></span>
+            <span class="selected-lang">EN</span>
+        </div>
+        <div class="custom-options" id="custom-options">
+            <div class="custom-option" data-value="en">
+                <span class="flag flag-en"></span>
+                <span>English</span>
+            </div>
+            <div class="custom-option" data-value="ru">
+                <span class="flag flag-ru"></span>
+                <span>Русский</span>
+            </div>
+            <div class="custom-option" data-value="uz">
+                <span class="flag flag-uz"></span>
+                <span>O'zbek</span>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <!-- Остальной контент остается без изменений -->
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        <span class="title-line">Creative</span>
-                        <span class="title-line">Designer</span>
+                        <span class="title-line" data-i18n="home.title1">Creative</span>
+                        <span class="title-line" data-i18n="home.title2">Designer</span>
                     </h1>
-                    <p class="hero-subtitle">Crafting digital experiences with passion and precision</p>
+                  <p class="hero-subtitle" data-i18n="home.subtitle">Crafting digital experiences with passion and precision</p>
                     <div class="hero-buttons">
-                        <a href="#portfolio" class="btn btn-primary">View Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        <a href="#portfolio" class="btn btn-primary" data-i18n="home.viewWork">View Work</a>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="home.contact">Get In Touch</a>                        
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="floating-card card-1">
                         <div class="card-content">
                             <div class="card-icon">🎨</div>
-                            <h3>Design</h3>
+                            <h3 data-i18n="home.design">Design</h3>
                         </div>
                     </div>
                     <div class="floating-card card-2">
                         <div class="card-content">
                             <div class="card-icon">💻</div>
-                            <h3>Develop</h3>
+                            <h3 data-i18n="home.develop">Develop</h3>
                         </div>
                     </div>
                     <div class="floating-card card-3">
                         <div class="card-content">
                             <div class="card-icon">🚀</div>
-                            <h3>Deploy</h3>
+                            <h3 data-i18n="home.deploy">Deploy</h3>
                         </div>
                     </div>
                 </div>
@@ -97,27 +133,26 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a frontend developer passionate about building responsive, user-friendly websites using HTML, CSS, JavaScript, and React. I enjoy turning ideas into interactive digital experiences. I'm currently expanding my skills into backend development to become a full-stack developer. I'm always open to new projects, learning opportunities, and collaborations that help me grow and create impactful work.
-                    </p>
+                    <p data-i18n="about.description">I'm a frontend developer passionate about building responsive, user-friendly websites using HTML, CSS, JavaScript, and React. I enjoy turning ideas into interactive digital experiences. I'm currently expanding my skills into backend development to become a full-stack developer. I'm always open to new projects, learning opportunities, and collaborations that help me grow and create impactful work.</p>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-icon">🎨</div>
-                            <h4>UI/UX Design</h4>
-                            <p>Creating intuitive and engaging user experiences</p>
+                            <h4 data-i18n="about.skill1">UI/UX Design</h4>
+                            <p data-i18n="about.skill1Desc">Creating intuitive and engaging user experiences</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">⚡</div>
-                            <h4>Frontend Dev</h4>
-                            <p>Building responsive and performant web applications</p>
+                            <h4 data-i18n="about.skill2">Frontend Dev</h4>
+                            <p data-i18n="about.skill2Desc">Building responsive and performant web applications</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">🎯</div>
-                            <h4>Brand Identity</h4>
-                            <p>Developing cohesive visual brand experiences</p>
+                            <h4 data-i18n="about.skill3">Brand Identity</h4>
+                            <p data-i18n="about.skill3Desc">Developing cohesive visual brand experiences</p>
                         </div>
                     </div>
                 </div>
@@ -127,10 +162,10 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
-        <div class=" def container">
+        <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Work</h2>
-                <p class="section-subtitle">A selection of my recent projects</p>
+                <h2 class="section-title" data-i18n="portfolio.title">Featured Work</h2>
+                <p class="section-subtitle" data-i18n="portfolio.subtitle">A selection of my recent projects</p>                
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-card">
@@ -138,8 +173,8 @@
                         <img src="./img/vibrant.png" alt="vibrant">
                         <div class="card-overlay">
                             <div class="overlay-content">
-                                <h3>E-commerce Platform</h3>
-                                <p>Modern shopping experience with seamless checkout</p>
+                                <h3 data-i18n="portfolio.project1.title">E-commerce Platform</h3>
+                                <p data-i18n="portfolio.project1.desc">Modern shopping experience with seamless checkout</p>
                                 <div class="card-tags">
                                     <span class="tag">HTML</span>
                                     <span class="tag">CSS</span>
@@ -154,8 +189,8 @@
                         <img src="./img/creative-agency.png" alt="Mobile Banking App">
                         <div class="card-overlay">
                             <div class="overlay-content">
-                                <h3>Creative Agency</h3>
-                                <p>Secure and intuitive financial management</p>
+                                <h3 data-i18n="portfolio.project2.title">Creative Agency</h3>
+                                <p data-i18n="portfolio.project2.desc">Secure and intuitive financial management</p>
                                 <div class="card-tags">
                                     <span class="tag">React</span>
                                     <span class="tag">UI/UX</span>
@@ -170,8 +205,8 @@
                         <img src="./img/dudeshape.png" alt="Brand Identity">
                         <div class="card-overlay">
                             <div class="overlay-content">
-                                <h3>Brand Identity</h3>
-                                <p>Complete visual identity for tech startup</p>
+                                <h3 data-i18n="portfolio.project3.title">Brand Identity</h3>
+                                <p data-i18n="portfolio.project3.desc">Complete visual identity for tech startup</p>
                                 <div class="card-tags">
                                     <span class="tag">Branding</span>
                                     <span class="tag">Logo Design</span>
@@ -186,8 +221,8 @@
                         <img src="./img/mailchimp.png" alt="SaaS Dashboard">
                         <div class="card-overlay">
                             <div class="overlay-content">
-                                <h3>MAIL Company</h3>
-                                <p>Analytics dashboard with real-time data</p>
+                                <h3 data-i18n="portfolio.project4.title">MAIL Company</h3>
+                                <p data-i18n="portfolio.project4.desc">Analytics dashboard with real-time data</p>
                                 <div class="card-tags">
                                     <span class="tag">HTML</span>
                                     <span class="tag">django</span>
@@ -205,44 +240,44 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-subtitle">Ready to bring your ideas to life</p>
+                <h2 class="section-title" data-i18n="contact.title">Let's Work Together</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Ready to bring your ideas to life</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>
                         <div>
-                            <h4>Email</h4>
+                            <h4 data-i18n="contact.email">Email</h4>
                             <p>rakhimjanovjakhongir9@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">📱</div>
                         <div>
-                            <h4>Phone</h4>
+                            <h4 data-i18n="contact.phone">Phone</h4>
                             <p>+998 (88) 309-2832</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div>
-                            <h4>Location</h4>
+                            <h4 data-i18n="contact.location">Location</h4>
                             <p>Uzbekistan, Andijan</p>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" name="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.send">Send Message</button>
                 </form>
             </div>
         </div>
@@ -253,7 +288,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2024 nezzo dev. All rights reserved.</p>
+                    <p data-i18n="footer.copyright">&copy; 2024 nezzo dev. All rights reserved.</p>
                 </div>
                 <div class="social-links">
                     <a href="#" class="social-link">LinkedIn</a>

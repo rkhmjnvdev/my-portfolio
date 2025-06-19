@@ -1,0 +1,63 @@
+{
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "home": {
+      "title1": "Creative",
+      "title2": "Designer",
+      "subtitle": "Crafting digital experiences with passion and precision",
+      "viewWork": "View Work",
+      "contact": "Get In Touch",
+      "design": "Design",
+      "develop": "Develop",
+      "deploy": "Deploy"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "I'm a frontend developer passionate about building responsive, user-friendly websites using HTML, CSS, JavaScript, and React. I enjoy turning ideas into interactive digital experiences. I'm currently expanding my skills into backend development to become a full-stack developer. I'm always open to new projects, learning opportunities, and collaborations that help me grow and create impactful work.",
+      "skill1": "UI/UX Design",
+      "skill1Desc": "Creating intuitive and engaging user experiences",
+      "skill2": "Frontend Dev",
+      "skill2Desc": "Building responsive and performant web applications",
+      "skill3": "Brand Identity",
+      "skill3Desc": "Developing cohesive visual brand experiences"
+    },
+    "portfolio": {
+      "title": "Featured Work",
+      "subtitle": "A selection of my recent projects",
+      "project1": {
+        "title": "E-commerce Platform",
+        "desc": "Modern shopping experience with seamless checkout"
+      },
+      "project2": {
+        "title": "Creative Agency",
+        "desc": "Secure and intuitive financial management"
+      },
+      "project3": {
+        "title": "Brand Identity",
+        "desc": "Complete visual identity for tech startup"
+      },
+      "project4": {
+        "title": "MAIL Company",
+        "desc": "Analytics dashboard with real-time data"
+      }
+    },
+    "contact": {
+      "title": "Let's Work Together",
+      "subtitle": "Ready to bring your ideas to life",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "send": "Send Message",
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "Your Email",
+      "messagePlaceholder": "Your Message"
+    },
+    "footer": {
+      "copyright": "© 2024 nezzo dev. All rights reserved."
+    }
+  }
+  

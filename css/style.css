@@ -231,8 +231,8 @@ body {
 }
 
 .card-2 {
-    top: 40%;
-    right: 10%;
+    top: 20%;
+    right: 0%;
     animation-delay: 4s;
 }
 
@@ -687,3 +687,226 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* Language Switcher Styles */
+.lang-switcher {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #language-selector {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 32px 8px 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 70px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+  }
+  
+  #language-selector:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  }
+  
+  #language-selector:focus {
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+  }
+  
+  /* Custom Arrow */
+  .lang-switcher::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 10px;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .lang-switcher:hover::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  /* Option Styles (Limited cross-browser support) */
+  #language-selector option {
+    background: #ffffff;
+    color: #333333;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border: none;
+  }
+  
+  #language-selector option:hover {
+    background: #f8f9ff;
+    color: #667eea;
+  }
+  
+  #language-selector option:checked {
+    background: #667eea;
+    color: white;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    #language-selector {
+      font-size: 12px;
+      padding: 6px 24px 6px 8px;
+      min-width: 60px;
+    }
+  
+    .lang-switcher::after {
+      right: 6px;
+      font-size: 8px;
+    }
+  }
+  
+  /* Alternative Custom Dropdown (More Control) */
+  .custom-lang-switcher {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-select {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 32px 8px 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 70px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+    position: relative;
+  }
+  
+  .custom-select:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  }
+  
+  .custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+  
+  .custom-options.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .custom-option {
+    padding: 12px 16px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .custom-option:hover {
+    background: #f8f9ff;
+    color: #667eea;
+  }
+  
+  .custom-option.selected {
+    background: #667eea;
+    color: white;
+  }
+  
+  .custom-option .flag {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  
+  /* Flag Icons */
+  .flag-en::before {
+    content: "🇺🇸";
+  }
+  .flag-ru::before {
+    content: "🇷🇺";
+  }
+  .flag-uz::before {
+    content: "🇺🇿";
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .custom-options {
+      background: #2d3748;
+      border: 1px solid #4a5568;
+    }
+  
+    .custom-option {
+      color: #e2e8f0;
+    }
+  
+    .custom-option:hover {
+      background: #4a5568;
+      color: #667eea;
+    }
+  }
+  
+  /* Animation for language change */
+  .lang-transition {
+    transition: opacity 0.3s ease;
+  }
+  
+  .lang-transition.changing {
+    opacity: 0.7;
+  }
+  
+  /* Accessibility */
+  #language-selector:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+  }
+  
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    #language-selector {
+      border: 2px solid #000;
+      background: #fff;
+      color: #000;
+    }
+  
+    #language-selector:hover {
+      background: #f0f0f0;
+    }
+  }
+  

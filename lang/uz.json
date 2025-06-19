@@ -1,0 +1,63 @@
+{
+    "nav": {
+      "home": "Bosh sahifa",
+      "about": "Men haqimda",
+      "portfolio": "Portfolio",
+      "contact": "Aloqa"
+    },
+    "home": {
+      "title1": "Ijodiy",
+      "title2": "Dizayner",
+      "subtitle": "Ishtiyoq va aniqlik bilan raqamli loyihalar yarataman",
+      "viewWork": "Ishlarim",
+      "contact": "Bog'lanish",
+      "design": "Dizayn",
+      "develop": "Dasturlash",
+      "deploy": "Joylashtirish"
+    },
+    "about": {
+      "title": "Men haqimda",
+      "description": "Men HTML, CSS, JavaScript va React orqali moslashuvchan va foydalanuvchi uchun qulay saytlar yaratishga ixtisoslashgan frontend dasturchiman. G'oyalarni interaktiv tajribaga aylantirishni yoqtiraman. Hozirda backend yo'nalishini o'rganmoqdaman va full-stack dasturchi bo'lishni maqsad qilganman.",
+      "skill1": "UI/UX Dizayn",
+      "skill1Desc": "Qulay va jozibador foydalanuvchi interfeyslarini yaratish",
+      "skill2": "Frontend Dasturlash",
+      "skill2Desc": "Moslashuvchan va tez ishlovchi web ilovalar yaratish",
+      "skill3": "Brend Identikasi",
+      "skill3Desc": "Kompaniyalar uchun yagona vizual uslub ishlab chiqish"
+    },
+    "portfolio": {
+      "title": "Tanlangan ishlar",
+      "subtitle": "Mening so'nggi loyihalarim tanlovasi",
+      "project1": {
+        "title": "E-commerce Platforma",
+        "desc": "Zamonaviy xarid qilish tajribasi"
+      },
+      "project2": {
+        "title": "Ijodiy Agentlik",
+        "desc": "Xavfsiz va qulay moliyaviy boshqaruv"
+      },
+      "project3": {
+        "title": "Brend Identikasi",
+        "desc": "Texnologik startap uchun to'liq vizual identika"
+      },
+      "project4": {
+        "title": "MAIL Kompaniyasi",
+        "desc": "Real vaqt ma'lumotlari bilan analitik panel"
+      }
+    },
+    "contact": {
+      "title": "Keling, birga ishlaylik",
+      "subtitle": "G'oyalaringizni haqiqatga aylantirishga tayyorman",
+      "email": "Email",
+      "phone": "Telefon",
+      "location": "Manzil",
+      "send": "Xabar yuborish",
+      "namePlaceholder": "Ismingiz",
+      "emailPlaceholder": "Email manzilingiz",
+      "messagePlaceholder": "Xabaringiz"
+    },
+    "footer": {
+      "copyright": "© 2024 nezzo dev. Barcha huquqlar himoyalangan."
+    }
+  }
+  
