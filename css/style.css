@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    
 }
 
 :root {
@@ -61,7 +63,7 @@ body {
 }
 
 .nav-logo .logo-text {
-    font-size: 1.5rem;
+    font-size: 30px;
     font-weight: 700;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -339,9 +341,11 @@ body {
 }
 
 .skills-grid {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-top: 100px;
 }
 
 .skill-item {
@@ -355,6 +359,8 @@ body {
 
 .skill-item:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.5s ease;
 }
 
 .skill-icon {
@@ -641,7 +647,10 @@ body {
     .container {
         padding: 0 1rem;
     }
-    
+    .def container{
+        display: flex;
+        justify-content: space-evenly;
+    }
     .nav-container {
         padding: 0 1rem;
     }
@@ -664,6 +673,10 @@ body {
     .floating-card {
         padding: 1rem;
         font-size: 0.9rem;
+    }
+    .floating-card:hover{
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        transition: all ease 0.3s;
     }
     
     .skills-grid {
